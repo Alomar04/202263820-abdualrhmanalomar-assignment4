@@ -2,14 +2,19 @@
 
 ## Overview
 
-This project is a single-page advanced portfolio website built with semantic HTML, custom CSS, and vanilla JavaScript. Assignment 3 extends the previous version by adding external API integrations, complex filtering/sorting logic, visitor state management, and performance optimizations — all while keeping the codebase lightweight and maintainable.
+This project is a single-page advanced portfolio website built with semantic HTML, custom CSS, and vanilla JavaScript. Assignment 4 is the final, production-ready version, building on Assignments 1–3 by delivering a complete, polished web application with external API integrations, complex filtering/sorting logic, visitor state management, performance optimizations, comprehensive documentation, and a professional video presentation — all while keeping the codebase lightweight and maintainable.
 
 ## Project Structure
 
-- `index.html` — Semantic page structure with four tab panels (About, Projects, GitHub, Contact), filter controls, visitor modal, and quote/weather widgets.
-- `css/styles.css` — Visual styling organized with CSS custom properties, responsive layout, component styles, and animation definitions.
-- `js/script.js` — Application logic including API fetching, project data management, form validation, visitor state, and event handling.
-- `docs/` — Assignment documentation (this file and the AI usage report).
+```text
+202263820-abdualrhmanalomar-assignment4/
+├── index.html          — Semantic page structure with 4 tab panels, filter controls, visitor modal, quote/weather widgets
+├── css/styles.css      — 1,049 lines: visual styling with CSS custom properties, responsive layout, animations
+├── js/script.js        — 666 lines: API fetching, project data, form validation, visitor state, event handling
+├── docs/               — AI usage report and this technical documentation
+├── presentation/       — Slide deck (PDF), demo video
+└── .gitignore          — Standard ignores for OS files and editor configs
+```
 
 ## Technical Decisions
 
@@ -38,7 +43,7 @@ Vanilla JavaScript was chosen because the project scope does not justify a frame
 ### 1. API Integration
 
 #### GitHub Repositories API
-- **Endpoint:** `https://api.github.com/users/abdualrhmanalomar/repos?sort=updated&per_page=6`
+- **Endpoint:** `https://api.github.com/users/Alomar04/repos?sort=updated&per_page=6`
 - **Method:** `fetch()` with `async/await`
 - **Error handling:** Shows a user-friendly error message with a "Retry" button if the API fails
 - **Lazy loading:** Repos are fetched only when the GitHub tab is first opened
@@ -50,9 +55,10 @@ Vanilla JavaScript was chosen because the project scope does not justify a frame
 - **User control:** A "New Quote" button lets visitors fetch another quote on demand
 
 #### Weather API
-- **Endpoint:** `https://wttr.in/Dhahran?format=%t|%C`
+- **Endpoint:** `https://api.open-meteo.com/v1/forecast?latitude=26.43&longitude=50.10&current_weather=true`
 - **Display:** Shows temperature and conditions in the hero panel
 - **Error handling:** Displays "Weather unavailable" if the request fails
+- **WMO codes:** Weather codes are mapped to human-readable labels (Clear sky, Partly cloudy, etc.)
 
 ### 2. Complex Logic — Filtering & Sorting
 
@@ -84,6 +90,7 @@ The `renderProjects()` function clears the grid and dynamically creates DOM elem
 #### Session Timer
 - When logged in, a timer displays how long the visitor has been on the site
 - Uses `setInterval` with 1-second updates and formats as `M:SS`
+- Start time is stored in `sessionStorage` so the timer persists through tab navigation
 
 ### 4. Advanced Form Validation
 
@@ -103,6 +110,7 @@ Additional features:
 - Hover transitions on project cards, repo cards, and buttons
 - Smooth color and shadow transitions when toggling the theme
 - Spinner animation for the GitHub loading state
+- Modal backdrop blur effect
 
 ## Security Considerations
 
@@ -132,3 +140,9 @@ The layout is mobile-friendly through CSS Grid, flexbox, and media queries:
 - Styles are grouped by component with section comments
 - Theme values are centralized in CSS custom properties
 - Project data is stored in a structured array for easy modification
+
+## Presentation
+
+The project includes a professional presentation package:
+- **Slide deck** (`presentation/slides.pdf`) — 10 slides with screenshots, diagrams, and visual aids
+- **Demo video** (`presentation/demo-video.mp4`) — Recorded presentation demonstrating all features

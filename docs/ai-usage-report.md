@@ -1,8 +1,8 @@
-# AI Usage Report
+# AI Usage Report — Assignment 4
 
 ## Tools Used & Use Cases
 
-The primary AI tool used in this assignment was **GitHub Copilot** (Claude model). It was used within acceptable coursework boundaries for the following purposes:
+The primary AI tools used in this assignment were **GitHub Copilot** (Claude model), **Claude**, and **ChatGPT**. They were used within acceptable coursework boundaries for the following purposes:
 
 | Use Case | How AI Was Used |
 |---|---|
@@ -11,13 +11,16 @@ The primary AI tool used in this assignment was **GitHub Copilot** (Claude model
 | **Code Review** | Reviewed the JavaScript structure for potential improvements in organization, security (XSS prevention), and performance |
 | **Documentation** | Assisted in drafting the README, technical documentation, and this AI usage report |
 | **UI/UX Suggestions** | Suggested the modal pattern for visitor login, the quote widget design, and the project control bar layout |
+| **Presentation** | Assisted in creating the slide deck structure and presenter script for the video presentation |
 
 ### Specific AI-Assisted Features
 - **GitHub API integration** — AI helped structure the `fetch()` call with proper headers, error handling, and DOM rendering
 - **Quotes API with fallback** — AI suggested implementing a fallback array of quotes for when the API is unavailable
+- **Weather API** — AI recommended the Open-Meteo API as a free, CORS-friendly alternative that requires no API key
 - **Project filtering logic** — AI helped design the multi-step filter → sort pipeline in `getFilteredAndSortedProjects()`
 - **XSS prevention** — AI recommended the `escapeHTML()` utility function and input sanitization for the visitor name
 - **Visitor state management** — AI assisted in designing the localStorage-based login/logout flow with modal UI
+- **Presentation slides** — AI helped create the HTML-based slide deck with professional styling and embedded screenshots
 
 ## Recommended AI Tools
 
@@ -34,6 +37,7 @@ The primary AI tool used in this assignment was **GitHub Copilot** (Claude model
 2. **Error handling patterns** — AI suggested robust error handling with user-friendly fallbacks (e.g., fallback quotes, "Retry" buttons for failed API calls)
 3. **Security awareness** — AI flagged potential XSS vulnerabilities when inserting API data into the DOM and recommended the `escapeHTML()` approach
 4. **Code organization** — AI helped structure the JavaScript into clearly separated sections with consistent patterns
+5. **Presentation quality** — AI assisted in creating professional-quality slides with proper visual aids and a structured presenter script
 
 ### Challenges
 1. **API selection** — AI initially suggested APIs that required API keys or had restrictive CORS policies, which required manual research to find suitable free alternatives
@@ -46,21 +50,23 @@ The primary AI tool used in this assignment was **GitHub Copilot** (Claude model
 Using AI in this assignment supported learning in several areas:
 
 1. **API integration patterns** — Learned how to use `fetch()` with `async/await`, handle HTTP errors, parse JSON responses, and implement fallback behavior
-2. **State management** — Understood how `localStorage` can manage multiple pieces of state (theme, visitor name) and how to synchronize UI with stored data
+2. **State management** — Understood how `localStorage` and `sessionStorage` can manage multiple pieces of state (theme, visitor name, timer) and how to synchronize UI with stored data
 3. **DOM manipulation** — Practiced creating, modifying, and removing DOM elements dynamically based on data and user interactions
 4. **Filtering and sorting** — Learned how to chain `.filter()` and `.sort()` array methods to implement multi-criteria data views
 5. **Security practices** — Gained awareness of XSS risks when inserting external data into the DOM and how to mitigate them
 6. **Code organization** — Improved ability to structure a larger JavaScript file into logical, maintainable sections
+7. **Presentation skills** — Learned to structure a technical presentation with clear sections, visual aids, and time management
 
 ## Responsible Use & Modifications
 
 All AI-generated code was **reviewed, understood, and modified** before being included in the final submission. Specific modifications include:
 
-1. **API endpoints** — Replaced AI-suggested APIs that required keys with free, no-auth alternatives (DummyJSON, wttr.in)
+1. **API endpoints** — Replaced AI-suggested APIs that required keys with free, no-auth alternatives (DummyJSON for quotes, Open-Meteo for weather)
 2. **Error messages** — Rewrote generic error messages to be specific and user-friendly for this portfolio context
 3. **Project data** — Replaced placeholder project descriptions with actual portfolio content matching real coursework
 4. **Security hardening** — Added input sanitization for the visitor name field after reviewing the AI-generated localStorage code
 5. **Removed unnecessary code** — Stripped out over-engineered patterns (debouncing, throttling, service workers) that were not appropriate for the assignment scope
 6. **Documentation** — Rewrote AI-drafted documentation to accurately reflect the actual implementation rather than generic descriptions
+7. **Presentation** — Reviewed and customized the slide content and script to accurately represent the project
 
 AI was used as a development assistant, not as a replacement for understanding. The final submission demonstrates comprehension of every feature and the ability to explain, modify, and extend the code independently.
