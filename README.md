@@ -60,7 +60,7 @@ This project is the **final, production-ready iteration** of an interactive port
 
 ### Option 2: Live Deployment
 
-Visit the live site: [GitHub Pages link] _(https://alomar04.github.io/202263820-abdualrhmanalomar-assignment4)_
+Visit the live site: [GitHub Pages link](https://alomar04.github.io/202263820-abdualrhmanalomar-assignment4)
 
 ### Requirements
 
